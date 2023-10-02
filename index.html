@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тестовое задание: Интерактивная валидация формы</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Регистрация</h1>
+<!-- браузнерную валидацию в виде аргумента required не ставлю, об обязательных полях будет сообщать JS -->  
+    <form>
+        <div class="form-group">
+            <label for="name">Имя</label>
+            <input type="text" name="name" class="form-control" id="name" placeholder="Введите имя" title="Поле 'Имя' обязательно для заполнения"> 
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" id="email" placeholder="Введите Email" title="Введите корректный адрес электронной почты">
+        </div>
+        <div class="form-group">
+            <label for="password">Пароль</label>
+            <input type="password" class="form-control" id="password" placeholder="придумаете пароль" >
+        </div>
+        <div class="form-group">
+            <label for="password-retype">Подтверждение пароля</label>
+            <input type="password" class="form-control" id="password-retype" placeholder="повторите пароль" minlength="6">
+        </div>
+        <div class="form-group">
+            <label for="tel">Телефон </label>
+            <input type="tel" class="form-control" id="tel" placeholder="+7987654321">
+        </div>
+        <button type="submit" class="btn btn-primary btn-hover">Отправить</button>
+        <button type="reset" class="btn btn-primary btn-hover">Очистить</button>
+    </form>
+
+    <script src="index.js"></script>
+
+</body>
+</html>
